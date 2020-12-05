@@ -1,0 +1,170 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "entityAddress",
+				"type": "address"
+			},
+			{
+				"name": "entityData",
+				"type": "uint256"
+			},
+			{
+				"name": "entityAnlage",
+				"type": "string"
+			},
+			{
+				"name": "entityStatus",
+				"type": "string"
+			},
+			{
+				"name": "entityFingerprint",
+				"type": "string"
+			}
+		],
+		"name": "newEntity",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "entityAddress",
+				"type": "address"
+			},
+			{
+				"name": "entityData",
+				"type": "uint256"
+			}
+		],
+		"name": "updateEntity",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "entityAddress",
+				"type": "address"
+			},
+			{
+				"name": "entityStatus",
+				"type": "string"
+			}
+		],
+		"name": "updateEntityStatus",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "entityList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "entityStructs",
+		"outputs": [
+			{
+				"name": "entityData",
+				"type": "uint256"
+			},
+			{
+				"name": "listPointer",
+				"type": "uint256"
+			},
+			{
+				"name": "entityStatus",
+				"type": "string"
+			},
+			{
+				"name": "entityAnlage",
+				"type": "string"
+			},
+			{
+				"name": "entityFingerprint",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getEntityCount",
+		"outputs": [
+			{
+				"name": "entityCount",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "entityAddress",
+				"type": "address"
+			}
+		],
+		"name": "isEntity",
+		"outputs": [
+			{
+				"name": "isIndeed",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
