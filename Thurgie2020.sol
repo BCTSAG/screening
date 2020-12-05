@@ -9,6 +9,7 @@ contract Thurgie2020 {
     string entityStatus;
     string entityAnlage;
     string entityFingerprint;
+    string entityDatum;
   }
 
   mapping(address => EntityStruct) public entityStructs;
@@ -23,12 +24,13 @@ contract Thurgie2020 {
     return entityList.length;
   }
 
-  function newEntity(address entityAddress, uint entityData, string entityAnlage, string entityStatus, string entityFingerprint) public returns(bool success) {
+  function newEntity(address entityAddress, uint entityData, string entityAnlage, string entityStatus, string entityFingerprint, string entityDatum) public returns(bool success) {
     if(isEntity(entityAddress)) throw;
     entityStructs[entityAddress].entityData = entityData;
     entityStructs[entityAddress].entityAnlage = entityAnlage;
     entityStructs[entityAddress].entityStatus = entityStatus;
     entityStructs[entityAddress].entityFingerprint = entityFingerprint;
+    entityStructs[entityAddress].entityDatum= entityDatum;
     entityStructs[entityAddress].listPointer = entityList.push(entityAddress) - 1;
     return true;
   }
