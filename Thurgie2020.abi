@@ -9,41 +9,6 @@
 			{
 				"name": "entityData",
 				"type": "uint256"
-			},
-			{
-				"name": "entityAnlage",
-				"type": "string"
-			},
-			{
-				"name": "entityStatus",
-				"type": "string"
-			},
-			{
-				"name": "entityFingerprint",
-				"type": "string"
-			}
-		],
-		"name": "newEntity",
-		"outputs": [
-			{
-				"name": "success",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "entityAddress",
-				"type": "address"
-			},
-			{
-				"name": "entityData",
-				"type": "uint256"
 			}
 		],
 		"name": "updateEntity",
@@ -55,6 +20,44 @@
 		],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "entityAddress",
+				"type": "address"
+			}
+		],
+		"name": "isEntity",
+		"outputs": [
+			{
+				"name": "isIndeed",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "entityList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -78,25 +81,6 @@
 		],
 		"payable": false,
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "entityList",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -128,6 +112,10 @@
 			{
 				"name": "entityFingerprint",
 				"type": "string"
+			},
+			{
+				"name": "entityDatum",
+				"type": "string"
 			}
 		],
 		"payable": false,
@@ -149,22 +137,42 @@
 		"type": "function"
 	},
 	{
-		"constant": true,
+		"constant": false,
 		"inputs": [
 			{
 				"name": "entityAddress",
 				"type": "address"
+			},
+			{
+				"name": "entityData",
+				"type": "uint256"
+			},
+			{
+				"name": "entityAnlage",
+				"type": "string"
+			},
+			{
+				"name": "entityStatus",
+				"type": "string"
+			},
+			{
+				"name": "entityFingerprint",
+				"type": "string"
+			},
+			{
+				"name": "entityDatum",
+				"type": "string"
 			}
 		],
-		"name": "isEntity",
+		"name": "newEntity",
 		"outputs": [
 			{
-				"name": "isIndeed",
+				"name": "success",
 				"type": "bool"
 			}
 		],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
